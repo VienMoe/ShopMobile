@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StarPhoneWebsite.Models.BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace StarPhoneWebsite.Controllers
         // GET: Shop
         public ActionResult Index()
         {
-            return View();
+            var db = MobileStoreBUS.DanhSach();
+            return View(db);
         }
 
         // GET: Shop/Details/5
