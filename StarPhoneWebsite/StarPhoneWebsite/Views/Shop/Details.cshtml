@@ -1,4 +1,4 @@
-﻿
+﻿@model ShopConnection.SanPham
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -11,7 +11,7 @@
                 <ul class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="category.html">Category</a></li>
-                    <li><a href="#">Samsung Galaxy</a></li>
+                    <li><a href="#">@Model.TenSP</a></li>
                 </ul>
             </div>
         </div>
@@ -20,7 +20,7 @@
                 <div class="product">
                     <div class="col-md-6">
                         <div class="image">
-                            <img src="~/Assets/images/galaxy-note.jpg" />
+                            <img src="~/Assets/images/@Model.HinhChinh" />
                             <div class="image-more">
                                 <ul class="row">
                                     <li class="col-lg-3 col-sm-3 col-xs-4">
@@ -41,14 +41,14 @@
                     </div>
                     <div class="col-md-6">
                         <div class="caption">
-                            <div class="name"><h3>Aliquam erat volutpat</h3></div>
+                            <div class="name"><h3>@Model.TenSP</h3></div>
                             <div class="info">
                                 <ul>
                                     <li>Brand: text</li>
-                                    <li>ID: 0122222</li>
+                                    <li>ID: @Model.MaNSX</li>
                                 </ul>
                             </div>
-                            <div class="price">$122<span>$98</span></div>
+                            <div class="price">@Model.Gia VND</div>
                             <div class="options">
                                 AVAILABLE OPTIONS
                                 <select>

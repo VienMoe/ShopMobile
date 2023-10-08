@@ -13,5 +13,10 @@ namespace StarPhoneWebsite.Models.BUS
             var db = new ShopConnectionDB();
             return db.Query<SanPham>("select * from SanPham where TinhTrang = 0");
         }
+        public static SanPham ChiTiet(String ct)
+        {
+            var db = new ShopConnectionDB();
+            return db.SingleOrDefault<SanPham>("select * from SanPham where TinhTrang = @0",ct);
+        }
     }
 }

@@ -17,9 +17,10 @@ namespace StarPhoneWebsite.Controllers
         }
 
         // GET: Shop/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(String id)
         {
-            return View();
+            var db = MobileStoreBUS.ChiTiet(id);
+            return View(db);
         }
 
         // GET: Shop/Create
